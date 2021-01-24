@@ -45,8 +45,8 @@ const DemoDualAxes: React.FC = (props) => {
   )
 
   
-  const minPrice = (coords.px * 0.9)
-  const maxPrice = (coords.px * 1.1)
+  const minPrice = (strike * 0.5)
+  const maxPrice = (coords.px *1.5)
   // const maxPrice = (currentPrice * 1.1)
 
 
@@ -73,7 +73,7 @@ const DemoDualAxes: React.FC = (props) => {
 
     var value = (usedPrice-strike) * (numberOfContracts*100) 
 
-    if (usedPrice < optionBreakeven) {
+    if (usedPrice < strike) {
       value = 0
       // continue //
     }
